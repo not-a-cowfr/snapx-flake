@@ -71,5 +71,11 @@ then run the update script
 ./update.sh
 ```
 
+then test the build
+
+```sh
+nix build .#packages.<platform>.snapx
+```
+
 [snapx]: https://github.com/SnapXL/SnapX
 [nushell]: https://github.com/nushell/nushell
