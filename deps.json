@@ -50,6 +50,11 @@
     "hash": "sha256-gWGIqXrac0fOnmGbovcFWv5Uj14hOyC+n0l45N7owMg="
   },
   {
+    "pname": "Avalonia.Controls.ColorPicker",
+    "version": "11.3.8",
+    "hash": "sha256-cB3mYR1X8Gzu1FQfWCJpfWosnpojIQhRSxrjYz4zD6g="
+  },
+  {
     "pname": "Avalonia.Controls.DataGrid",
     "version": "11.2.5",
     "hash": "sha256-eGKc+UnsO5nNiUd7+n3CQW6vIWq2qpazYvYXrVTQY7s="
@@ -58,6 +63,11 @@
     "pname": "Avalonia.Desktop",
     "version": "11.3.8",
     "hash": "sha256-X/ggsRzsN7o3O4Iw4uvjgOdlW58Xbe8Jpv4llRuFcoA="
+  },
+  {
+    "pname": "Avalonia.Diagnostics",
+    "version": "11.3.8",
+    "hash": "sha256-eOLf2Id4Olbq/nMWERarked+vg5ZnVMCxMKOXBfqAqM="
   },
   {
     "pname": "Avalonia.FreeDesktop",
@@ -103,6 +113,11 @@
     "pname": "Avalonia.Svg",
     "version": "11.0.0",
     "hash": "sha256-edKxg+OsZ2EkWvSDpGxRTLmEx3U1G0+6CbRJy4VUr/Y="
+  },
+  {
+    "pname": "Avalonia.Themes.Simple",
+    "version": "11.3.8",
+    "hash": "sha256-GSD4yvyDKqBSGV/rwE/EO3CTp9dG4eR4B5H0Y/u9+hE="
   },
   {
     "pname": "Avalonia.Win32",
@@ -231,8 +246,8 @@
   },
   {
     "pname": "GitVersion.MsBuild",
-    "version": "6.4.0",
-    "hash": "sha256-RceMq5MMX9mQS5GQr8ikLtyvam9I1de6SNpu6wEpgCU="
+    "version": "6.5.0",
+    "hash": "sha256-GDIcpMbcya1ssCxgSstZLZHi0B9+C0oMO0GJJGzH+PA="
   },
   {
     "pname": "Google.Apis",
@@ -861,8 +876,8 @@
   },
   {
     "pname": "Serilog.Sinks.Console",
-    "version": "6.0.0",
-    "hash": "sha256-QH8ykDkLssJ99Fgl+ZBFBr+RQRl0wRTkeccQuuGLyro="
+    "version": "6.1.1",
+    "hash": "sha256-CfIg4Us4kSMQAn6rU2rsAeE22g6MpFiZdhoZWySpZeY="
   },
   {
     "pname": "Serilog.Sinks.File",

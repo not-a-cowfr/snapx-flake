@@ -71,3 +71,4 @@ dotnet add package AsyncImageLoader.Avalonia
 dotnet add package Avalonia.Desktop
 dotnet add package runtime.any.System.Collections
 dotnet add package runtime.unix.System.Diagnostics.Debug
+dotnet add package Avalonia.Diagnostics

@@ -9,20 +9,29 @@
   zlib,
   ...
 }:
-
+let
+  dotnet = dotnetCorePackages.dotnet_9;
+in
 buildDotnetModule rec {
   pname = "SnapX";
   version = "latest";
-  dotnet-sdk = dotnetCorePackages.dotnet_9.sdk;
 
   src = fetchFromGitHub {
     owner = "SnapXL";
     repo = "SnapX";
-    rev = "master";
-    sha256 = "sha256-rLue0PRlnNisn14vKuA3fT8Cd6TPxbJvPaOrYgX9NEw=";
+    rev = "df5e89f6d3e9714c0fdc43a57b0f40edc2e84bf2";
+    sha256 = "sha256-1D562znJ4nkAuMSlGP3S4kAzlQ+Qti00n5SRdutwD/g=";
   };
 
   nugetDeps = ./deps.json;
+  projectFile = "SnapX.Avalonia/SnapX.Avalonia.csproj";
+
+  dotnet-sdk = dotnet.sdk;
+  dotnet-runtime = dotnet.runtime;
+
+  selfContainedBuild = true;
+  useAppHost = true;
+  enableParallelBuilding = true;
 
   nativeBuildInputs = [
     gitMinimal
@@ -31,25 +40,8 @@ buildDotnetModule rec {
     zlib.dev
   ];
 
-  projectFile = "SnapX.sln";
-
-  dotnetFlags = [ "-p:Configuration=Release" ];
-  useAppHost = false;
-  dontDotnetFixup = true;
-  enableParallelBuilding = true;
-
-  dotnetInstallFlags = [
-    "-p:TargetPlaform=unix-generic"
-    "-p:CopyGenericLauncher=True"
-    "-p:CopyCncDll=True"
-    "-p:CopyD2kDll=True"
-    "-p:UseAppHost=False"
-  ];
-
-  installPhase = ''
-    mkdir -p $out/bin
-    cp -r ./SnapX.Avalonia/bin/Release/net9.0/* $out/bin/
-    cp -r ./SnapX.CLI/bin/Release/net9.0/* $out/bin/
+  postInstall = ''
+    # ln -s $out/bin/snapx-ui $out/bin/snapx
   '';
 
   meta = {
